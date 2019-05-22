@@ -51,7 +51,7 @@ def name_player():
 def player_choice(columns):
     # Lets ask the player which coordinates is he choosing
 
-    coord = int(input("Ingresa la coordenada (del 1 al 3):"))
+    coord = int(input("Ingresa la coordenada (del 0 al 2 incluidos):"))
 
     # Lets check that the coordinates are in the range of the board
     check_input(coord, columns)
@@ -65,6 +65,7 @@ def already_selected(value_to_check):
     while value_to_check != 0:
         print("Mal, esa celda esta cogida, repita valores por favor: ")
         repeat = 0
+        value_to_check = 0
     return(repeat)
 
 
