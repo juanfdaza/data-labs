@@ -28,15 +28,12 @@ def define_matrix():
     row_column_definition = check_value(row_column_definition)
     return(row_column_definition)
 
-columns = define_matrix()
-rows = define_matrix()
 
 # Function to define the board to play once we know the number of rows/columns
 
-def matrix_game():
+def matrix_game(columns,rows):
     matrix_to_play = [[0 for column in range(columns)] for row in range(rows)]
     return matrix_to_play
-
 
 ##################################################################################
 ### PART 2: Let the game begin allowing each player to choose their option #######
@@ -51,10 +48,10 @@ def name_player():
     player = input("Que jugador eres? ")
     return player
 
-def player_choice():
+def player_choice(columns):
     # Lets ask the player which coordinates is he choosing
 
-    coord = int(input("Ingresa la coordinada:"))
+    coord = int(input("Ingresa la coordenada (del 1 al 3):"))
 
     # Lets check that the coordinates are in the range of the board
     check_input(coord, columns)
@@ -63,22 +60,19 @@ def player_choice():
 
 
 # 2nd -- Function to Check that a value has not been introduced on an already filled position
-def already_selected(coord_x,coord_y):
-    repeat = 0
-    while matrix_to_play[coord_x][coord_y] != 0:
+def already_selected(value_to_check):
+    repeat = 1
+    while value_to_check != 0:
         print("Mal, esa celda esta cogida, repita valores por favor: ")
-        repeat = 1
+        repeat = 0
     return(repeat)
 
-# 3rd -- Function to submit the play of the player
 
-def change_value(a,b,player):
-    matrix_to_play[a-1][b-1]= player
 
-# 4th -- Function to check if somebody has won and the game is over -->
+# 3rd -- Function to check if somebody has won and the game is over -->
 # with the explanation of how a player can win on the proper function
 
-def game_on(player):
+def game_on(columns,rows,player,matrix_to_play):
     column_counter = 0
     row_counter = 0
     cross_counter = 0
@@ -151,7 +145,9 @@ def whole_game():
     rows = define_matrix()
 
     # Matrix construction
-    matrix_to_play = define_matrix()
+    matrix_to_play = matrix_game(columns,rows)
+    print(matrix_to_play)
+
 
     # The proper game
 
@@ -160,22 +156,24 @@ def whole_game():
         player = name_player()
 
         # Get players values
-        coord_x = player_choice()
-        coord_y = player_choice()
+        coord_x = player_choice(columns)
+        coord_y = player_choice(rows)
 
         #Checking the coordinates are inbounds
-        repeat_value = already_selected(coord_x,coord_y)
-        while repeat_value == 1:
-            coord_x = player_choice()
-            coord_y = player_choice()
+        repeat_value = already_selected(matrix_to_play[coord_x][coord_y])
+        while repeat_value == 0:
+            coord_x = player_choice(columns)
+            coord_y = player_choice(rows)
+            repeat_value = already_selected(matrix_to_play[coord_x][coord_y])
 
         # Changing the values in the matrix
-        change_value(coord_x,coord_y,player)
+        matrix_to_play[coord_x][coord_y] = player
 
         # Check if the game is over
-        result = game_on(player)
+        result = game_on(columns,rows,player,matrix_to_play)
+        print(matrix_to_play)
 
-    print('Player', player, 'has won, these are the results \n', matriz_resultado)
+    print('Player', player, 'has won, these are the results \n', matrix_to_play)
 
 
 whole_game()
