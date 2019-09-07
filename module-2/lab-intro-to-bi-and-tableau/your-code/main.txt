@@ -1,0 +1,1 @@
+https://public.tableau.com/profile/juan.fernandez.daza#!/vizhome/introduction-to-bi-and-tableau/AverageWarehouseSalesbyYearQuarter?publish=yes
