@@ -1,0 +1,1644 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0818.2120                               -->
+<workbook source-build='2019.2.3 (20192.19.0818.2120)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='liquor_store_sales (liquor_store_sales)' inline='true' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='liquor_store_sales' name='google-sheets.1eckuau1mhg2le105kcp0105h9qw'>
+            <connection REDIRECT_URI='urn:ietf:wg:oauth:2.0:oob' SCOPE='email profile https://www.googleapis.com/auth/drive.readonly' class='google-sheets' cleaning='no' compat='no' dataRefreshTime='' filename='liquor_store_sales' googleSheetId='1YJWh1sxKSx5R5yaq_pv7IwtKkTXHxQxBGdjjpGhCCp0' interpretationMode='8' mimeType='application/vnd.google-apps.spreadsheet' server='' server-oauth='' username='fernandez.daza.juan@gmail.com' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='google-sheets.1eckuau1mhg2le105kcp0105h9qw' name='liquor_store_sales' table='[liquor_store_sales$]' type='table'>
+          <columns gridOrigin='A1:I10001:no:A1:I2147483647:0' header='yes' outcome='2'>
+            <column datatype='string' name='Year' ordinal='0' />
+            <column datatype='integer' name='Month' ordinal='1' />
+            <column datatype='string' name='Supplier' ordinal='2' />
+            <column datatype='integer' name='ItemCode' ordinal='3' />
+            <column datatype='string' name='Description' ordinal='4' />
+            <column datatype='string' name='ItemType' ordinal='5' />
+            <column datatype='real' name='RetailSales' ordinal='6' />
+            <column datatype='real' name='RetailTransfers' ordinal='7' />
+            <column datatype='real' name='WarehouseSales' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supplier</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Supplier]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>Supplier</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ItemCode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ItemCode]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>ItemCode</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Description</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Description]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>Description</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ItemType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ItemType]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>ItemType</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RetailSales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RetailSales]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>RetailSales</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RetailTransfers</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RetailTransfers]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>RetailTransfers</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WarehouseSales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[WarehouseSales]</local-name>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias>WarehouseSales</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[liquor_store_sales]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:I10001:no:A1:I2147483647:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Item Code' datatype='integer' name='[ItemCode]' role='dimension' type='ordinal' />
+      <column caption='Item Type' datatype='string' name='[ItemType]' role='dimension' type='nominal' />
+      <column aggregation='None' caption='Quarter' datatype='integer' name='[Month (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[Month]' peg='0' size='4' />
+        <aliases>
+          <alias key='0' value='Q1' />
+          <alias key='1' value='Q2' />
+          <alias key='2' value='Q3' />
+          <alias key='3' value='Q4' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Retail Sales' datatype='real' name='[RetailSales]' role='measure' type='quantitative' />
+      <column caption='Retail Transfers' datatype='real' name='[RetailTransfers]' role='measure' type='quantitative' />
+      <column caption='Warehouse Sales' datatype='real' name='[WarehouseSales]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/juanfernandez-dazadeflorez/Desktop/Ironhack/labs/data-labs/module-2/lab-bi-analysis-with-tableau/your-code/liquor_store_sales (liquor_store_sales).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/07/2019 08:47:18 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='liquor_store_sales (liquor_store_sales)' increment-value='%null%' refresh-type='create' rows-inserted='128355' timestamp-start='2019-09-07 08:47:18.817' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Month</remote-alias>
+              <ordinal>1</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Supplier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Supplier]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Supplier</remote-alias>
+              <ordinal>2</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>659</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ItemCode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ItemCode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ItemCode</remote-alias>
+              <ordinal>3</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40206</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Description</remote-alias>
+              <ordinal>4</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>40206</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ItemType</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ItemType]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ItemType</remote-alias>
+              <ordinal>5</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>RetailSales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[RetailSales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RetailSales</remote-alias>
+              <ordinal>6</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5239</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>RetailTransfers</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[RetailTransfers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RetailTransfers</remote-alias>
+              <ordinal>7</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>647</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>WarehouseSales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[WarehouseSales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>WarehouseSales</remote-alias>
+              <ordinal>8</ordinal>
+              <family>liquor_store_sales</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>783</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.569002' measure-ordering='alphabetic' measure-percentage='0.430998' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Average Retail Sales by Year/Month w Item'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column caption='Item Type' datatype='string' name='[ItemType]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Retail Sales' datatype='real' name='[RetailSales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[RetailSales]' derivation='Avg' name='[avg:RetailSales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ItemType]' derivation='None' name='[none:ItemType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Month]' derivation='None' name='[none:Month:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[avg:RetailSales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month:ok])</rows>
+        <cols>[federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:ItemType:nk]</cols>
+      </table>
+      <simple-id uuid='{FACA9CCC-D865-4437-A9DE-E078F42C13E7}' />
+    </worksheet>
+    <worksheet name='Average Retail Sales by Year/Quarter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column aggregation='None' caption='Quarter' datatype='integer' name='[Month (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Month]' peg='0' size='4' />
+              <aliases>
+                <alias key='0' value='Q1' />
+                <alias key='1' value='Q2' />
+                <alias key='2' value='Q3' />
+                <alias key='3' value='Q4' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Retail Sales' datatype='real' name='[RetailSales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[RetailSales]' derivation='Avg' name='[avg:RetailSales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Month (bin)]' derivation='None' name='[none:Month (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[avg:RetailSales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month (bin):ok])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{806FC58B-E45F-4D7C-8FD4-A2566319655B}' />
+    </worksheet>
+    <worksheet name='Average Retail Transfers by Year/Month w Item'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column caption='Item Type' datatype='string' name='[ItemType]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Retail Transfers' datatype='real' name='[RetailTransfers]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[RetailTransfers]' derivation='Avg' name='[avg:RetailTransfers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ItemType]' derivation='None' name='[none:ItemType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Month]' derivation='None' name='[none:Month:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[avg:RetailTransfers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month:ok])</rows>
+        <cols>[federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:ItemType:nk]</cols>
+      </table>
+      <simple-id uuid='{32BE8A2E-1CDB-4AEA-B840-096F37ECBBF7}' />
+    </worksheet>
+    <worksheet name='Average Transfers Sales by Year/Quarter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column aggregation='None' caption='Quarter' datatype='integer' name='[Month (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Month]' peg='0' size='4' />
+              <aliases>
+                <alias key='0' value='Q1' />
+                <alias key='1' value='Q2' />
+                <alias key='2' value='Q3' />
+                <alias key='3' value='Q4' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Retail Transfers' datatype='real' name='[RetailTransfers]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[RetailTransfers]' derivation='Avg' name='[avg:RetailTransfers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Month (bin)]' derivation='None' name='[none:Month (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[avg:RetailTransfers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month (bin):ok])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{DCBE5B8E-274D-48E7-AA17-34CAC08F5EB2}' />
+    </worksheet>
+    <worksheet name='Average Warehouse Sales by Year/Month w Item'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column caption='Item Type' datatype='string' name='[ItemType]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Warehouse Sales' datatype='real' name='[WarehouseSales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[WarehouseSales]' derivation='Avg' name='[avg:WarehouseSales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ItemType]' derivation='None' name='[none:ItemType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Month]' derivation='None' name='[none:Month:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[avg:WarehouseSales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month:ok])</rows>
+        <cols>[federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:ItemType:nk]</cols>
+      </table>
+      <simple-id uuid='{64FFDA7A-6C2B-420A-9480-CF868F6C4AA0}' />
+    </worksheet>
+    <worksheet name='Average Warehouse Sales by Year/Quarter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column aggregation='None' caption='Quarter' datatype='integer' name='[Month (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Month]' peg='0' size='4' />
+              <aliases>
+                <alias key='0' value='Q1' />
+                <alias key='1' value='Q2' />
+                <alias key='2' value='Q3' />
+                <alias key='3' value='Q4' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Warehouse Sales' datatype='real' name='[WarehouseSales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[WarehouseSales]' derivation='Avg' name='[avg:WarehouseSales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Month (bin)]' derivation='None' name='[none:Month (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[avg:WarehouseSales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month (bin):ok])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{043E4024-79CE-4D1A-A9E0-33ADA570D84D}' />
+    </worksheet>
+    <worksheet name='Creating_Aliases'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column aggregation='None' caption='Quarter' datatype='integer' name='[Month (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Month]' peg='0' size='4' />
+              <aliases>
+                <alias key='0' value='Q1' />
+                <alias key='1' value='Q2' />
+                <alias key='2' value='Q3' />
+                <alias key='3' value='Q4' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column-instance column='[Month (bin)]' derivation='None' name='[none:Month (bin):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month (bin):ok]</rows>
+        <cols />
+        <show-full-range>
+          <column>[federated.1r1dnn20kp81og173h3aq0vfvtj5].[Month (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{7234228D-96E2-437A-BC00-3AC511676E76}' />
+    </worksheet>
+    <worksheet name='Total Retail Sales by Year/Month w Item'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column caption='Item Type' datatype='string' name='[ItemType]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Retail Sales' datatype='real' name='[RetailSales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[ItemType]' derivation='None' name='[none:ItemType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Month]' derivation='None' name='[none:Month:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[RetailSales]' derivation='Sum' name='[sum:RetailSales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[sum:RetailSales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month:ok])</rows>
+        <cols>[federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:ItemType:nk]</cols>
+      </table>
+      <simple-id uuid='{4E7F6306-A6B0-47C3-AB54-953D445176CD}' />
+    </worksheet>
+    <worksheet name='Total Retail Sales by Year/Quarter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column aggregation='None' caption='Quarter' datatype='integer' name='[Month (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Month]' peg='0' size='4' />
+              <aliases>
+                <alias key='0' value='Q1' />
+                <alias key='1' value='Q2' />
+                <alias key='2' value='Q3' />
+                <alias key='3' value='Q4' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Retail Sales' datatype='real' name='[RetailSales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Month (bin)]' derivation='None' name='[none:Month (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[RetailSales]' derivation='Sum' name='[sum:RetailSales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[sum:RetailSales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month (bin):ok])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{CA007ABC-00EB-41E4-BFD8-D4513D7263E0}' />
+    </worksheet>
+    <worksheet name='Total Retail Transfers by Year/Month w Item'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column caption='Item Type' datatype='string' name='[ItemType]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Retail Transfers' datatype='real' name='[RetailTransfers]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[ItemType]' derivation='None' name='[none:ItemType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Month]' derivation='None' name='[none:Month:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[RetailTransfers]' derivation='Sum' name='[sum:RetailTransfers:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[sum:RetailTransfers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month:ok])</rows>
+        <cols>[federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:ItemType:nk]</cols>
+      </table>
+      <simple-id uuid='{61CEF249-3610-487D-971E-FB28C2644C68}' />
+    </worksheet>
+    <worksheet name='Total Transfers by Year/Quarter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column aggregation='None' caption='Quarter' datatype='integer' name='[Month (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Month]' peg='0' size='4' />
+              <aliases>
+                <alias key='0' value='Q1' />
+                <alias key='1' value='Q2' />
+                <alias key='2' value='Q3' />
+                <alias key='3' value='Q4' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Retail Transfers' datatype='real' name='[RetailTransfers]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Month (bin)]' derivation='None' name='[none:Month (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[RetailTransfers]' derivation='Sum' name='[sum:RetailTransfers:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[sum:RetailTransfers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month (bin):ok])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{FC67234B-ED45-4189-B4C7-820D1B95F5D7}' />
+    </worksheet>
+    <worksheet name='Total Warehouse Sales by Year/Month w Item'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column caption='Item Type' datatype='string' name='[ItemType]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Warehouse Sales' datatype='real' name='[WarehouseSales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[ItemType]' derivation='None' name='[none:ItemType:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Month]' derivation='None' name='[none:Month:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WarehouseSales]' derivation='Sum' name='[sum:WarehouseSales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[sum:WarehouseSales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month:ok])</rows>
+        <cols>[federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:ItemType:nk]</cols>
+      </table>
+      <simple-id uuid='{9FD88AA3-8154-44AE-BC93-FB6EE5BE11C1}' />
+    </worksheet>
+    <worksheet name='Total Warehouse Sales by Year/Quarter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='liquor_store_sales (liquor_store_sales)' name='federated.1r1dnn20kp81og173h3aq0vfvtj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1r1dnn20kp81og173h3aq0vfvtj5'>
+            <column aggregation='None' caption='Quarter' datatype='integer' name='[Month (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Month]' peg='0' size='4' />
+              <aliases>
+                <alias key='0' value='Q1' />
+                <alias key='1' value='Q2' />
+                <alias key='2' value='Q3' />
+                <alias key='3' value='Q4' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Month]' role='dimension' type='quantitative' />
+            <column caption='Warehouse Sales' datatype='real' name='[WarehouseSales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Month (bin)]' derivation='None' name='[none:Month (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WarehouseSales]' derivation='Sum' name='[sum:WarehouseSales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1r1dnn20kp81og173h3aq0vfvtj5].[sum:WarehouseSales:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Year:nk] / [federated.1r1dnn20kp81og173h3aq0vfvtj5].[none:Month (bin):ok])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{FFE1B7D2-75D5-4245-B228-3D631E2221E5}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Creating_Aliases'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{250B23ED-8EE8-46E4-B3DF-FE55CCF0CAD8}' />
+    </window>
+    <window class='worksheet' name='Total Retail Sales by Year/Quarter' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{350C9FD2-919D-45CA-919D-2FB2F695AAF6}' />
+    </window>
+    <window class='worksheet' name='Average Retail Sales by Year/Quarter' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2E2B76F6-B398-42EA-9277-865E2B448CB9}' />
+    </window>
+    <window class='worksheet' name='Total Retail Sales by Year/Month w Item' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7CC04B04-F860-4D0A-9542-FE09AADB85DB}' />
+    </window>
+    <window class='worksheet' name='Average Retail Sales by Year/Month w Item' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0CAFC110-8412-458C-8D89-D39F4AB71F2B}' />
+    </window>
+    <window class='worksheet' name='Total Transfers by Year/Quarter' tab-color='#72bcbb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4CD761C5-566E-4B23-98F0-3AF8F6E24D42}' />
+    </window>
+    <window class='worksheet' name='Average Transfers Sales by Year/Quarter' tab-color='#72bcbb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F814A4EB-1D6A-4760-A4EA-2D05EFB353F9}' />
+    </window>
+    <window class='worksheet' name='Total Retail Transfers by Year/Month w Item' tab-color='#72bcbb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F11437A0-7D78-4ADE-AF28-17A8A34C3E0F}' />
+    </window>
+    <window class='worksheet' name='Average Retail Transfers by Year/Month w Item' tab-color='#72bcbb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{01F96253-C5F4-41CF-897A-343371537931}' />
+    </window>
+    <window class='worksheet' name='Total Warehouse Sales by Year/Quarter' tab-color='#6e597f'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FE947766-394F-402F-ACE5-4812BE896C02}' />
+    </window>
+    <window class='worksheet' name='Average Warehouse Sales by Year/Quarter' tab-color='#6e597f'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B2DAD0C3-6EF7-466A-9762-3B33E6DB0BB8}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Total Warehouse Sales by Year/Month w Item' tab-color='#6e597f'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{91D257F1-C6B9-4A54-8469-C00C2B2186E1}' />
+    </window>
+    <window class='worksheet' name='Average Warehouse Sales by Year/Month w Item' tab-color='#6e597f'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AF4D2A0B-F60C-4E08-AB3D-E41403FBF126}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Total Warehouse Sales by Year/Month w Item' width='384'>
+      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
+      E8kdMQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='208' name='Total Warehouse Sales by Year/Quarter' width='384'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
