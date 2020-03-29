@@ -29,7 +29,7 @@ A different number of skills, tools and techonologies have been used, such as:
 The project consists on three python notebooks to obtain the main KPIs of a group of episodes of a podcast called "Pero entonces...", then write down all the information into a GSheets doc and finally, evaluated the relation between the title of each podcast and the number of likes/views.
 Step by step:
 
-1. Jupyter notebook #1 -- Scraping_from_youtube.ipynb
+####  1. Jupyter notebook #1 -- Scraping_from_youtube.ipynb
 
 * Scrape each podcast KPIs and write them down in different JSON files.
 
@@ -45,7 +45,7 @@ Step by step:
 	    "URL": "https://www.youtube.com/watch?v=l1CjJ4UJo-Q&list=PLeZfGBk92nGBjxFoHCIdllJN-jj0tAZd7&index=2&t=0s"
 	}
 
-2. Jupyter notebook #2 -- Gsheets-update.ipynb
+#### 2. Jupyter notebook #2 -- Gsheets-update.ipynb
 
 * Read JSON files and create a dataset
 * Establish the API connection and open the GSheets file
@@ -57,11 +57,11 @@ Step by step:
 * Techniques & Python libraries used: Google API, pygsheets (modify the GSheets doc from the jupyter notebook), plotly (data visualization).
 * Output: a csv file with the Summary tab to use it in the model of the 3rd notebook.
 
-3. Jupyter notebook #3 -- Likes_and_views_estimator.ipynb
+#### 3. Jupyter notebook #3 -- Likes_and_views_estimator.ipynb
 
 * In this case, the csv file is read, next, the data is adapted to fit in the model, and the last step is to run the Deep Learning model.
 
-### Data loading
+* a) Data loading
 
 * The initial contains these columns -- with these types of data.
 
@@ -77,17 +77,17 @@ Step by step:
 
 * Basically it contains the title of each episode and the KPIs per day.
 
-### Data Wrangling and Cleaning
+* b) Data Wrangling and Cleaning
 
 * Some columns are completely useless for the model, the following columns are eliminated: Date, Pub_date, Episode and Link.
 * A new column is calculated with the # of days since the publication.
 
-### Data Analysis
+* c) Data Analysis
 
 * Boxplots and scatter matrix are drawn to evaluate the distribution of each KPI -- likes, views, dislikes and number_of_days_since_publication. These graphs show some outliers that may confuse the model in likes and views (see "Boxplot distribution the episodes per KPI" and "KPI matrix")
 
 
-### Model Training and Evaluation
+* d) Model Training and Evaluation
 
 * The article [2] has been key to run this model. Two main tasks take place:
 
@@ -115,8 +115,8 @@ Step by step:
 * Also, an additional timeseries ML code would be useful to estimate the likes/views in a particular period of time
 
 ## References
-[1] How to Automate Google Sheets with Python, Dayal Chand Aichara Jun19, https://medium.com/game-of-data/play-with-google-spreadsheets-with-python-301dd4ee36eb
-[2] Machine Learning -- Word Embedding & Sentiment Clasiffication using Keras, JavaidNabi Oct18, https://towardsdatascience.com/machine-learning-word-embedding-sentiment-classification-using-keras-b83c28087456
-Plotly tutorials -- https://plotly.com/python/
-Towards data science -- https://towardsdatascience.com/
-Stackoverflow as a encyclopedia -- https://stackoverflow.com/
+* [1] How to Automate Google Sheets with Python, Dayal Chand Aichara Jun19, https://medium.com/game-of-data/play-with-google-spreadsheets-with-python-301dd4ee36eb
+* [2] Machine Learning -- Word Embedding & Sentiment Clasiffication using Keras, JavaidNabi Oct18, https://towardsdatascience.com/machine-learning-word-embedding-sentiment-classification-using-keras-b83c28087456
+* Plotly tutorials -- https://plotly.com/python/
+* Towards data science -- https://towardsdatascience.com/
+* Stackoverflow as a encyclopedia -- https://stackoverflow.com/
