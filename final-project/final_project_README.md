@@ -22,16 +22,18 @@ A different number of skills, tools and techonologies have been used, such as:
 	* Word Embedding.
 	* JSON and csv output files.
 	* Web scraping -- youtube.
+	* Selenium -- open G Chrome and scroll down automatically
 	* Stackoverflow
 
 ## Projects workflow
 
-The project consists on three python notebooks to obtain the main KPIs of a group of episodes of a podcast called "Pero entonces...", then write down all the information into a GSheets doc and finally, evaluated the relation between the title of each podcast and the number of likes/views.
+The project consists on 4 python notebooks to obtain the main KPIs of a group of episodes of a podcast called "Pero entonces..." plus on a separate process the KPIs for its parent channel "Phi Beta Podcast". Once there, then write down all the "Pero Entonces" podcasts' KPIs into a GSheets doc and finally, evaluate the relation between the title of each podcast and the number of likes/views.
+
 Step by step:
 
-####  1. Jupyter notebook #1 -- Scraping_from_youtube.ipynb
+####  1a. Jupyter notebook #1a -- Scraping_from_youtube.ipynb
 
-* Scrape each podcast KPIs and write them down in different JSON files.
+* Scrape each podcast of the child channel's "Pero Entonces" KPIs and write them down in different JSON files.
 
 * Techniques & Python libraries used: BeautifulSoup (scraping), urllib (to run the requests), json (writer of the files)
 * Output: a JSON file by podcast title with its main KPIs. Example:
@@ -45,11 +47,19 @@ Step by step:
 	    "URL": "https://www.youtube.com/watch?v=l1CjJ4UJo-Q&list=PLeZfGBk92nGBjxFoHCIdllJN-jj0tAZd7&index=2&t=0s"
 	}
 
+####  1b. Jupyter notebook #1b -- Scraping_from_youtube-others.ipynb
+
+* Scrape each parent channel "Phi Beta Podcast" podcasts' KPIs and write them down in csv file.
+
+* Techniques & Python libraries used: BeautifulSoup (scraping), urllib (to run the requests), Selenium (scrape all the page scrolling down to get more episodes)
+* Output: a csv file by podcast title with its main KPIs.
+
 #### 2. Jupyter notebook #2 -- Gsheets-update.ipynb
 
 * Read JSON files and create a dataset
 * Establish the API connection and open the GSheets file
-* Write all the new data in each tab of the Workbook. The logic is as follows: a) Its a new episode -- a new tab is created with a column of the KPIs of the day; b) The episode already existed -- a new column is added with the KPIs of the day (See photo "Gsheets_tab_example"). Instructions have been taken mainly from [1].
+* Write all the new data in each tab of the Workbook -- again only from the "Pero Entonces" episodes, its the focus. 
+* The logic is as follows: a) Its a new episode -- a new tab is created with a column of the KPIs of the day; b) The episode already existed -- a new column is added with the KPIs of the day (See photo "Gsheets_tab_example"). Instructions have been taken mainly from [1].
 * Update "Summary" tab that works as a DB with the records of each day -- a daily evolution can be done.
 * Plot a) Daily evolution of the likes and views and b) The last picture (last day) --  in both cases, individually per episode and of the whole channel. 
 * Write the Summary tab into a csv. 
@@ -59,7 +69,7 @@ Step by step:
 
 #### 3. Jupyter notebook #3 -- Likes_and_views_estimator.ipynb
 
-* In this case, the csv file is read, next, the data is adapted to fit in the model, and the last step is to run the Deep Learning model.
+* In this case, two csv files are read (1 from focus "Pero Entonces" and 2 the rest of subchannels of "Phi Beta Podcasts"), next, the data is adapted to fit in the model, and the last step is to run the Deep Learning model.
 
 * a) Data loading
 
@@ -107,7 +117,7 @@ Step by step:
 
 * The words used in each episode title are definitely linked to the number of views or likes that video will have.
 * KERAS and gensim are ideal to build models that are based on texts. They help tokenize and prepare the data to run different ML or DL models.
-* This Youtube channel only contains 28 episodes as of today which make it difficult for the model to be robust. Actually the accuracy of the models are vere small. Trying this model in datasets like the one used in [2] shows accuracies around 0.85.
+* The final correlation between words and likes/views is not sufficiently robust to extract great conclusions. The reason is that the dictionary constructed by scraping all these Episode titles (around 1k) is quite small, no more that 1200 words.
 
 ## Next steps
 
